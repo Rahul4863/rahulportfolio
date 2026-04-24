@@ -1,0 +1,51 @@
+export const NAV_ITEMS = [
+  { id: "hero", icon: "🏠", label: "Home" },
+  { id: "about", icon: "👤", label: "About" },
+  { id: "resume", icon: "📄", label: "Resume" },
+  { id: "portfolio", icon: "🖼", label: "Portfolio" },
+  { id: "services", icon: "⚙️", label: "Services" },
+  { id: "contact", icon: "✉️", label: "Contact" },
+];
+export const SKILLS = [
+  { name: "HTML", val: 100 },
+  { name: "CSS", val: 90 },
+  { name: "JavaScript", val: 75 },
+  { name: "PHP", val: 80 },
+  { name: "WordPress / CMS", val: 90 },
+  { name: "Photoshop", val: 55 },
+];
+export const STATS = [
+  { icon: "😊", num: 232, label: "Happy Clients" },
+  { icon: "📓", num: 521, label: "Projects" },
+  { icon: "🎧", num: 1453, label: "Hours Of Support" },
+  { icon: "👥", num: 32, label: "Hard Workers" },
+];
+
+export const PORTFOLIO_ITEMS = [
+  { id: 1, cat: "app", title: "App 1", desc: "Mobile app design & development", emoji: "📱" },
+  { id: 2, cat: "product", title: "Product 1", desc: "Product design & branding", emoji: "🛍" },
+  { id: 3, cat: "branding", title: "Branding 1", desc: "Corporate identity & logo", emoji: "✨" },
+  { id: 4, cat: "books", title: "Books 1", desc: "Editorial & print design", emoji: "📚" },
+  { id: 5, cat: "app", title: "App 2", desc: "UI/UX for fintech app", emoji: "💳" },
+  { id: 6, cat: "product", title: "Product 2", desc: "E-commerce product page", emoji: "🎁" },
+  { id: 7, cat: "branding", title: "Branding 2", desc: "Brand refresh & guidelines", emoji: "🎨" },
+  { id: 8, cat: "books", title: "Books 2", desc: "Coffee table book layout", emoji: "📖" },
+  { id: 9, cat: "app", title: "App 3", desc: "Dashboard interface design", emoji: "📊" },
+];
+
+export const SERVICES = [
+  { icon: "💼", title: "Web Design", desc: "Crafting visually stunning, user-centered digital experiences that captivate and convert." },
+  { icon: "✅", title: "UI/UX Design", desc: "Research-driven design systems and interfaces that delight users at every touchpoint." },
+  { icon: "📈", title: "Analytics & SEO", desc: "Data-driven strategies to boost your online presence and drive organic growth." },
+  { icon: "🔭", title: "Brand Strategy", desc: "Defining and articulating your brand's identity, voice, and visual language." },
+  { icon: "☀️", title: "Creative Direction", desc: "Overseeing the visual narrative across campaigns, ensuring cohesion and impact." },
+  { icon: "📅", title: "Project Management", desc: "End-to-end project coordination, keeping timelines tight and quality high." },
+];
+
+export const TESTIMONIALS = [
+  { initials: "SG", name: "Saul Goodman", role: "CEO & Founder", text: "Working with Alex transformed our brand entirely. The attention to detail and creative vision exceeded every expectation we had going into the project." },
+  { initials: "SW", name: "Sara Wilsson", role: "Designer", text: "A rare talent who combines aesthetic sensibility with technical precision. Our collaboration produced work I'm genuinely proud to show clients." },
+  { initials: "JK", name: "Jena Karlis", role: "Store Owner", text: "The redesign of our online store led to a 40% increase in conversions within the first month. Alex understands how design drives results." },
+  { initials: "MB", name: "Matt Brandon", role: "Freelancer", text: "Professional, responsive, and deeply skilled. Alex consistently delivers work that feels both timeless and contemporary." },
+  { initials: "JL", name: "John Larson", role: "Entrepreneur", text: "I've worked with many designers over the years — Alex stands out for the ability to translate complex ideas into clean, compelling visuals." },
+];
