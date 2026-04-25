@@ -1,28 +1,3 @@
-// import { SERVICES } from "../data/constants";
-
-// export default function Services() {
-//   return (
-//     <section id="services">
-//       <div className="section-header">
-//         <div className="section-label">// 05. services</div>
-//         <h2 className="section-title">Services</h2>
-//         <p className="section-desc">
-//           End-to-end creative solutions — from initial concept to pixel-perfect, production-ready delivery.
-//         </p>
-//       </div>
-
-//       <div className="services-grid">
-//         {SERVICES.map((s, i) => (
-//           <div className="service-card" key={i}>
-//             <div className="service-icon">{s.icon}</div>
-//             <h4>{s.title}</h4>
-//             <p>{s.desc}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
 import { useState } from "react";
 import { SERVICES } from "../data/constants";
 import ServicesModal from "./ServicesModal";
