@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SERVICES } from "../data/constants";
-import ServicesModal from "./ServicesModal";
+import ServicesModal from "./Servicesmodal";
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
