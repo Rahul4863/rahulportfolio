@@ -15,7 +15,7 @@ export default function Sidebar({ activeSection, sidebarOpen, setSidebarOpen, sc
           </svg>
         </div>
 
-        <div className="site-name">Alex Smith</div>
+        <div className="site-name">Rahul Soni</div>
         <div className="site-tagline">Creative Professional</div>
 
         <div className="social-links">
