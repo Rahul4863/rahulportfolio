@@ -1,5 +1,4 @@
 import { NAV_ITEMS, socials } from "../data/constants";
-
 export default function Sidebar({
   activeSection,
   sidebarOpen,
@@ -32,7 +31,6 @@ export default function Sidebar({
             />
           </svg>
         </div>
-
         <div className="site-name">Rahul Soni</div>
         <div className="site-tagline">Creative Professional</div>
         <div className="site-tagline">Sr Software Engineer</div>
@@ -43,7 +41,6 @@ export default function Sidebar({
             </a>
           ))}
         </div>
-
         <nav>
           {NAV_ITEMS.map(({ id, icon, label }) => (
             <a

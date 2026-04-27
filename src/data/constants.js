@@ -44,14 +44,37 @@ export const PORTFOLIO_ITEMS = [
 ];
 
 export const SERVICES = [
-  { icon: "💼", title: "Web Design", desc: "Crafting visually stunning, user-centered digital experiences that captivate and convert." },
-  { icon: "✅", title: "UI/UX Design", desc: "Research-driven design systems and interfaces that delight users at every touchpoint." },
-  { icon: "📈", title: "Analytics & SEO", desc: "Data-driven strategies to boost your online presence and drive organic growth." },
-  { icon: "🔭", title: "Brand Strategy", desc: "Defining and articulating your brand's identity, voice, and visual language." },
-  { icon: "☀️", title: "Creative Direction", desc: "Overseeing the visual narrative across campaigns, ensuring cohesion and impact." },
-  { icon: "📅", title: "Project Management", desc: "End-to-end project coordination, keeping timelines tight and quality high." },
+  {
+    icon: "🌐",
+    title: "Full Stack Web Development",
+    desc: "Building scalable and high-performance web applications using MERN stack, Next.js, and Laravel."
+  },
+  {
+    icon: "⚛️",
+    title: "Frontend Development",
+    desc: "Creating responsive and modern user interfaces with React.js, Next.js, and clean UI/UX practices."
+  },
+  {
+    icon: "🛠️",
+    title: "Backend Development",
+    desc: "Developing secure and efficient APIs using Node.js, Express, and PHP Laravel with optimized database design."
+  },
+  {
+    icon: "📱",
+    title: "Mobile App Development",
+    desc: "Building cross-platform mobile applications using React Native with smooth performance and user experience."
+  },
+  {
+    icon: "🔗",
+    title: "API Integration",
+    desc: "Integrating third-party services, payment gateways, and RESTful APIs for seamless functionality."
+  },
+  {
+    icon: "🚀",
+    title: "Deployment & DevOps",
+    desc: "Deploying and managing applications on VPS servers with performance optimization and monitoring."
+  },
 ];
-
 export const TESTIMONIALS = [
   { initials: "SG", name: "Saul Goodman", role: "CEO & Founder", text: "Working with Alex transformed our brand entirely. The attention to detail and creative vision exceeded every expectation we had going into the project." },
   { initials: "SW", name: "Sara Wilsson", role: "Designer", text: "A rare talent who combines aesthetic sensibility with technical precision. Our collaboration produced work I'm genuinely proud to show clients." },

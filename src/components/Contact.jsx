@@ -34,21 +34,21 @@ export default function Contact() {
             <div className="contact-info-icon">📍</div>
             <div>
               <h3>Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p>Subhash Nagar Gurgaon,Haryana 122001</p>
             </div>
           </div>
           <div className="contact-info-item">
             <div className="contact-info-icon">📞</div>
             <div>
               <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
+              <p>+91 7982 9721 51</p>
             </div>
           </div>
           <div className="contact-info-item">
             <div className="contact-info-icon">✉️</div>
             <div>
               <h3>Email Us</h3>
-              <p>info@example.com</p>
+              <p>rahulsoni6352@gmail.com</p>
             </div>
           </div>
         </div>
