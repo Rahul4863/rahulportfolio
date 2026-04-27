@@ -35,11 +35,13 @@ export default function Hero({ scrollTo }) {
       <div className="hero-content">
         <div className="hero-greeting">// Think. Code. Repeat.</div>
         <h1 className="hero-name">
-          Alex <span>Smith</span>
+          Rahul <span>Soni</span>
         </h1>
         <div className="hero-typed">
           I'm a&nbsp;
-          <TypedText words={["Designer", "Developer", "Freelancer", "Photographer"]} />
+      <TypedText words={[
+  "Full Stack Developer",
+  "MERN & Next.js Developer","PHP Laravel Developer","React Native App Developer"]} />
         </div>
         <div className="hero-cta">
           <button className="btn-primary" onClick={() => scrollTo("portfolio")}>

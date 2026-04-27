@@ -7,12 +7,22 @@ export const NAV_ITEMS = [
   { id: "contact", icon: "✉️", label: "Contact" },
 ];
 export const SKILLS = [
-  { name: "HTML", val: 100 },
-  { name: "CSS", val: 90 },
-  { name: "JavaScript", val: 75 },
-  { name: "PHP", val: 80 },
-  { name: "WordPress / CMS", val: 90 },
-  { name: "Photoshop", val: 55 },
+  // 🌐 Frontend
+  { name: "HTML5", val: 95 },
+  { name: "CSS3", val: 90 },
+  { name: "JavaScript (ES6+)", val: 85 },
+  { name: "React.js", val: 85 },
+  { name: "Next.js", val: 80 },
+  { name: "Tailwind CSS / Bootstrap", val: 85 },
+  { name: "Node.js", val: 80 },
+  { name: "Express.js", val: 80 },
+  { name: "PHP", val: 85 },
+  { name: "Laravel", val: 85 },
+  { name: "MongoDB", val: 80 },
+  { name: "MySQL", val: 85 },
+  { name: "React Native", val: 55 },
+  { name: "Git & GitHub", val: 85 },
+  { name: "Linux Basics", val: 70 },
 ];
 export const STATS = [
   { icon: "😊", num: 232, label: "Happy Clients" },
@@ -48,4 +58,11 @@ export const TESTIMONIALS = [
   { initials: "JK", name: "Jena Karlis", role: "Store Owner", text: "The redesign of our online store led to a 40% increase in conversions within the first month. Alex understands how design drives results." },
   { initials: "MB", name: "Matt Brandon", role: "Freelancer", text: "Professional, responsive, and deeply skilled. Alex consistently delivers work that feels both timeless and contemporary." },
   { initials: "JL", name: "John Larson", role: "Entrepreneur", text: "I've worked with many designers over the years — Alex stands out for the ability to translate complex ideas into clean, compelling visuals." },
+];
+export const socials = [
+  { name: "𝕏", link: "https://x.com/yourusername" },
+  { name: "f", link: "https://facebook.com/yourusername" },
+  { name: "in", link: "https://linkedin.com/in/yourusername" },
+  { name: "📷", link: "https://instagram.com/yourusername" },
+  { name: "sk", link: "https://skype.com/yourusername" },
 ];

@@ -1,4 +1,4 @@
-# Alex Smith — Portfolio
+# Rahul Soni — Portfolio
 
 A dark-themed personal portfolio site built with React + Vite.
 
