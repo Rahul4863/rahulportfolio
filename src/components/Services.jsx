@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { SERVICES } from "../data/constants";
 import ServicesModal from "./Servicesmodal";
@@ -23,25 +22,30 @@ export default function Services() {
           <div className="section-label">// 05. services</div>
           <h2 className="section-title">Services</h2>
           <p className="section-desc">
-            End-to-end creative solutions — from initial concept to pixel-perfect, production-ready delivery.
+            End-to-end creative solutions — from initial concept to
+            pixel-perfect, production-ready delivery.
           </p>
         </div>
 
         <div className="services-grid">
-          {SERVICES.map((s, i) => (
-            <div
-              className="service-card"
-              key={i}
-              onClick={() => openService(s)}
-              style={{ cursor: "pointer" }}
-            >
-              <div className="service-icon">{s.icon}</div>
-              <h4>{s.title}</h4>
-              <p>{s.desc}</p>
-              {/* "More details" hint */}
-              <div className="service-card-hint">View Details →</div>
-            </div>
-          ))}
+          {SERVICES.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <div
+                className="service-card"
+                key={i}
+                onClick={() => openService(s)}
+                style={{ cursor: "pointer" }}
+              >
+                <Icon size={30} className="service-icon" />
+                <h4>{s.title}</h4>
+                <p>{s.desc}</p>
+
+                {/* "More details" hint */}
+                <div className="service-card-hint">View Details →</div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

@@ -1,5 +1,10 @@
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaGlobe, FaTools, FaServer } from "react-icons/fa";
+import { SiReact, SiNodedotjs } from "react-icons/si";
+import { MdPhoneIphone } from "react-icons/md";
+import { BiLinkAlt } from "react-icons/bi";
+import { GiRocket } from "react-icons/gi";
 export const NAV_ITEMS = [
   { id: "hero", icon: "🏠", label: "Home" },
   { id: "about", icon: "👤", label: "About" },
@@ -46,32 +51,32 @@ export const PORTFOLIO_ITEMS = [
 
 export const SERVICES = [
   {
-    icon: "🌐",
+    icon: FaGlobe,
     title: "Full Stack Web Development",
     desc: "Building scalable and high-performance web applications using MERN stack, Next.js, and Laravel."
   },
   {
-    icon: "⚛️",
+    icon: SiReact,
     title: "Frontend Development",
     desc: "Creating responsive and modern user interfaces with React.js, Next.js, and clean UI/UX practices."
   },
   {
-    icon: "🛠️",
+    icon: FaServer,
     title: "Backend Development",
     desc: "Developing secure and efficient APIs using Node.js, Express, and PHP Laravel with optimized database design."
   },
   {
-    icon: "📱",
+    icon: MdPhoneIphone,
     title: "Mobile App Development",
     desc: "Building cross-platform mobile applications using React Native with smooth performance and user experience."
   },
   {
-    icon: "🔗",
+    icon: BiLinkAlt,
     title: "API Integration",
     desc: "Integrating third-party services, payment gateways, and RESTful APIs for seamless functionality."
   },
   {
-    icon: "🚀",
+    icon: GiRocket,
     title: "Deployment & DevOps",
     desc: "Deploying and managing applications on VPS servers with performance optimization and monitoring."
   },
