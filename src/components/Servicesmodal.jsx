@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 // Extended detail data for each service — customize as needed
 const SERVICE_DETAILS = {
-  "Web Design": {
+  "Full Stack Web Development": {
     icon: "💼",
     tagline: "Where aesthetics meet function",
     features: [
@@ -15,7 +15,7 @@ const SERVICE_DETAILS = {
     deliverables: "Wireframes · Hi-fi mockups · Production code · Style guide",
     turnaround: "2 – 6 weeks depending on scope",
   },
-  "UI/UX Design": {
+  "Frontend Development": {
     icon: "✅",
     tagline: "Research-driven, user-obsessed",
     features: [
@@ -24,7 +24,7 @@ const SERVICE_DETAILS = {
       "Interactive prototypes for testing",
       "Design system & component library",
     ],
-    tools: ["Figma", "Maze", "Hotjar", "Notion"],
+    tools: ["HTML", "CSS", "Javascript", "Bootstrap","Reactjs"],
     deliverables: "Research report · User flows · Prototype · Design system",
     turnaround: "3 – 8 weeks",
   },
@@ -106,10 +106,7 @@ export default function ServicesModal({ service, onClose, onPrev, onNext }) {
         {/* Prev / Next */}
         <button className="pm-nav pm-nav-prev" onClick={onPrev}>‹</button>
         <button className="pm-nav pm-nav-next" onClick={onNext}>›</button>
-
         <div className="pm-inner">
-
-          {/* LEFT — icon panel */}
           <div className="pm-slider sm-icon-panel">
             <div className="sm-icon-display">
               <span className="sm-big-icon">{detail.icon || service.icon}</span>
@@ -123,7 +120,6 @@ export default function ServicesModal({ service, onClose, onPrev, onNext }) {
               </div>
             </div>
           </div>
-
           {/* RIGHT — info panel */}
           <div className="pm-info">
             <div className="pm-meta-card">
@@ -142,12 +138,10 @@ export default function ServicesModal({ service, onClose, onPrev, onNext }) {
                 <span className="pm-meta-val">{detail.turnaround || "—"}</span>
               </div>
             </div>
-
             <h2 className="pm-proj-title">{service.title}</h2>
             <p className="pm-proj-desc" style={{ marginBottom: "1rem" }}>
               {service.desc} — {detail.tagline}
             </p>
-
             {/* Features list */}
             <ul className="sm-features">
               {(detail.features || []).map((f) => (
@@ -156,7 +150,6 @@ export default function ServicesModal({ service, onClose, onPrev, onNext }) {
                 </li>
               ))}
             </ul>
-
             <button className="btn-primary pm-cta" onClick={onClose}>
               Get In Touch →
             </button>

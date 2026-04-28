@@ -7,7 +7,6 @@ export const NAV_ITEMS = [
   { id: "contact", icon: "✉️", label: "Contact" },
 ];
 export const SKILLS = [
-  // 🌐 Frontend
   { name: "HTML5", val: 95 },
   { name: "CSS3", val: 90 },
   { name: "JavaScript (ES6+)", val: 85 },
@@ -83,9 +82,9 @@ export const TESTIMONIALS = [
   { initials: "JL", name: "John Larson", role: "Entrepreneur", text: "I've worked with many designers over the years — Alex stands out for the ability to translate complex ideas into clean, compelling visuals." },
 ];
 export const socials = [
+  { name: "in", link: "https://www.linkedin.com/in/rahul-soni-353879195" },
+  { name: "🐙", link: "https://github.com/Rahul4863" },
   { name: "𝕏", link: "https://x.com/yourusername" },
   { name: "f", link: "https://facebook.com/yourusername" },
-  { name: "in", link: "https://linkedin.com/in/yourusername" },
   { name: "📷", link: "https://instagram.com/yourusername" },
-  { name: "sk", link: "https://skype.com/yourusername" },
 ];

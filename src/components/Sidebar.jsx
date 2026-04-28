@@ -1,10 +1,12 @@
 import { NAV_ITEMS, socials } from "../data/constants";
+import { useState } from "react";
 export default function Sidebar({
   activeSection,
   sidebarOpen,
   setSidebarOpen,
   scrollTo,
 }) {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <button
@@ -14,22 +16,17 @@ export default function Sidebar({
         {sidebarOpen ? "✕" : "☰"}
       </button>
       <aside className={`sidebar${sidebarOpen ? " open" : ""}`}>
-        <div className="profile-img">
-          <svg
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="50" cy="38" r="22" fill="#c8a96e" opacity="0.6" />
-            <ellipse
-              cx="50"
-              cy="90"
-              rx="34"
-              ry="22"
-              fill="#c8a96e"
-              opacity="0.4"
-            />
-          </svg>
+        <div className="profile-img" onClick={() => setShowModal(true)}>
+          <img src="../rahul_image.png" alt="" srcset="" />
+          <circle cx="50" cy="38" r="22" fill="#c8a96e" opacity="0.6" />
+          <ellipse
+            cx="50"
+            cy="90"
+            rx="34"
+            ry="22"
+            fill="#c8a96e"
+            opacity="0.4"
+          />
         </div>
         <div className="site-name">Rahul Soni</div>
         <div className="site-tagline">Creative Professional</div>
@@ -54,6 +51,23 @@ export default function Sidebar({
           ))}
         </nav>
       </aside>
+      {showModal && (
+        <div
+          className="img-modal"
+          onClick={() => setShowModal(false)} // click outside close
+        >
+          <div
+            className="img-modal-content"
+            onClick={(e) => e.stopPropagation()} // prevent close on image click
+          >
+            <span className="close-btn" onClick={() => setShowModal(false)}>
+              ✕
+            </span>
+            <h3>Profile Picture</h3>
+            <img src="../rahul_image.png" alt="preview" />
+          </div>
+        </div>
+      )}
     </>
   );
 }
