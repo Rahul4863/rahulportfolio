@@ -1,3 +1,5 @@
+import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 export const NAV_ITEMS = [
   { id: "hero", icon: "🏠", label: "Home" },
   { id: "about", icon: "👤", label: "About" },
@@ -82,9 +84,24 @@ export const TESTIMONIALS = [
   { initials: "JL", name: "John Larson", role: "Entrepreneur", text: "I've worked with many designers over the years — Alex stands out for the ability to translate complex ideas into clean, compelling visuals." },
 ];
 export const socials = [
-  { name: "in", link: "https://www.linkedin.com/in/rahul-soni-353879195" },
-  { name: "🐙", link: "https://github.com/Rahul4863" },
-  { name: "𝕏", link: "https://x.com/yourusername" },
-  { name: "f", link: "https://facebook.com/yourusername" },
-  { name: "📷", link: "https://instagram.com/yourusername" },
+  {
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/rahul-soni-353879195",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/Rahul4863",
+  },
+  {
+    icon: FaXTwitter,
+    link: "https://x.com/yourusername",
+  },
+  {
+    icon: FaFacebook,
+    link: "https://facebook.com/yourusername",
+  },
+  {
+    icon: FaInstagram,
+    link: "https://instagram.com/yourusername",
+  },
 ];

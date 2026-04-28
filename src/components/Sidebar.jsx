@@ -29,14 +29,17 @@ export default function Sidebar({
           />
         </div>
         <div className="site-name">Rahul Soni</div>
-        <div className="site-tagline">Creative Professional</div>
+        <div className="site-tagline">Full Stack Developer</div>
         <div className="site-tagline">Sr Software Engineer</div>
-        <div className="social-links">
-          {socials.map((s, i) => (
-            <a key={i} href={s.link} target="_blank" rel="noopener noreferrer">
-              {s.name}
-            </a>
-          ))}
+        <div className="socials">
+          {socials.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <a key={index} href={item.link} target="_blank" rel="noreferrer">
+                <Icon size={20} />
+              </a>
+            );
+          })}
         </div>
         <nav>
           {NAV_ITEMS.map(({ id, icon, label }) => (
