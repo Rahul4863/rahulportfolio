@@ -42,16 +42,18 @@ export default function Sidebar({
           })}
         </div>
         <nav>
-          {NAV_ITEMS.map(({ id, icon, label }) => (
-            <a
-              key={id}
-              className={activeSection === id ? "active" : ""}
-              onClick={() => scrollTo(id)}
-            >
-              <span className="nav-icon">{icon}</span>
-              {label}
-            </a>
-          ))}
+         {NAV_ITEMS.map(({ id, icon: Icon, label }) => (
+  <a
+    key={id}
+    className={activeSection === id ? "active" : ""}
+    onClick={() => scrollTo(id)}
+  >
+    <span className="nav-icon">
+      <Icon size={18} />   {/* 👈 yaha change hai */}
+    </span>
+    {label}
+  </a>
+))}
         </nav>
       </aside>
       {showModal && (

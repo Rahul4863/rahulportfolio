@@ -1,89 +1,99 @@
 import { useEffect } from "react";
-
+import { FaGlobe, FaServer } from "react-icons/fa";
+import { SiReact, SiNodedotjs, SiLaravel } from "react-icons/si";
+import { MdPhoneIphone } from "react-icons/md";
+import { BiLinkAlt } from "react-icons/bi";
+import { GiRocket } from "react-icons/gi";
 // Extended detail data for each service — customize as needed
-const SERVICE_DETAILS = {
+export const SERVICE_DETAILS = {
   "Full Stack Web Development": {
-    icon: "💼",
-    tagline: "Where aesthetics meet function",
+    icon: FaGlobe,
+    tagline: "End-to-end scalable web solutions",
     features: [
-      "Custom responsive layouts for all devices",
-      "Performance-optimized HTML/CSS/JS",
-      "Accessibility (WCAG 2.1) compliance",
-      "Design handoff with full style guides",
+      "Complete MERN / Next.js / Laravel development",
+      "Responsive & high-performance applications",
+      "Secure authentication (JWT / Role-based access)",
+      "Real-time features (Socket.io integration)",
     ],
-    tools: ["Figma", "Webflow", "React", "GSAP"],
-    deliverables: "Wireframes · Hi-fi mockups · Production code · Style guide",
+    tools: ["React", "Next.js", "Node.js", "Laravel", "MongoDB", "MySQL"],
+    deliverables: "Full web app · Admin panel · API integration · Deployment",
     turnaround: "2 – 6 weeks depending on scope",
   },
+
   "Frontend Development": {
-    icon: "✅",
-    tagline: "Research-driven, user-obsessed",
+    icon: SiReact,
+    tagline: "Modern, fast & responsive UI",
     features: [
-      "User research & journey mapping",
-      "Information architecture",
-      "Interactive prototypes for testing",
-      "Design system & component library",
+      "Pixel-perfect responsive UI design",
+      "Component-based architecture",
+      "Performance optimization & lazy loading",
+      "Clean UI with Tailwind / Bootstrap",
     ],
-    tools: ["HTML", "CSS", "Javascript", "Bootstrap","Reactjs"],
-    deliverables: "Research report · User flows · Prototype · Design system",
-    turnaround: "3 – 8 weeks",
+    tools: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap"],
+    deliverables: "UI screens · Reusable components · Optimized frontend",
+    turnaround: "1 – 3 weeks",
   },
-  "Analytics & SEO": {
-    icon: "📈",
-    tagline: "Data that drives decisions",
+
+  "Backend Development": {
+    icon: FaServer,
+    tagline: "Secure & scalable server-side systems",
     features: [
-      "Technical SEO audit & fixes",
-      "Keyword strategy & content mapping",
-      "GA4 / Search Console setup",
-      "Monthly performance reporting",
+      "REST API development",
+      "JWT authentication & role-based access",
+      "Database design & optimization",
+      "Secure API routing & validation",
     ],
-    tools: ["GA4", "SEMrush", "Ahrefs", "Looker Studio"],
-    deliverables: "SEO audit · Keyword map · Dashboard · Monthly report",
-    turnaround: "Ongoing retainer or one-off audit",
+    tools: ["Node.js", "Express.js", "Laravel", "MongoDB", "MySQL"],
+    deliverables: "APIs · Database schema · Admin backend",
+    turnaround: "2 – 5 weeks",
   },
-  "Brand Strategy": {
-    icon: "🔭",
-    tagline: "Identity that lasts",
+
+  "Mobile App Development": {
+    icon: MdPhoneIphone,
+    tagline: "Cross-platform mobile apps",
     features: [
-      "Brand discovery & positioning workshop",
-      "Logo system & visual identity",
-      "Brand voice & messaging framework",
-      "Full brand guidelines document",
+      "React Native app development",
+      "API integration with backend",
+      "Smooth UI/UX & performance optimization",
+      "Android-ready builds",
     ],
-    tools: ["Figma", "Illustrator", "Notion", "Miro"],
-    deliverables: "Brand deck · Logo files · Guidelines PDF · Tone-of-voice doc",
-    turnaround: "4 – 10 weeks",
+    tools: ["React Native", "Expo", "Firebase"],
+    deliverables: "Mobile app · API integration · APK build",
+    turnaround: "3 – 6 weeks",
   },
-  "Creative Direction": {
-    icon: "☀️",
-    tagline: "Vision across every touchpoint",
+
+  "API Integration": {
+    icon: BiLinkAlt,
+    tagline: "Seamless third-party integrations",
     features: [
-      "Campaign concept development",
-      "Art direction for shoots & video",
-      "Cross-channel visual cohesion",
-      "Team briefing & creative oversight",
+      "Payment gateway integration (Razorpay, Stripe)",
+      "External API integration",
+      "Webhook & automation setup",
+      "Error handling & security",
     ],
-    tools: ["Adobe CC", "Figma", "Frame.io", "Notion"],
-    deliverables: "Creative brief · Mood boards · Concept deck · Final assets",
-    turnaround: "Project-based",
+    tools: ["REST APIs", "Razorpay", "Stripe", "Postman"],
+    deliverables: "Integrated services · Secure endpoints",
+    turnaround: "1 – 2 weeks",
   },
-  "Project Management": {
-    icon: "📅",
-    tagline: "On time. Every time.",
+
+  "Deployment & DevOps": {
+    icon: GiRocket,
+    tagline: "Reliable deployment & scaling",
     features: [
-      "Scope definition & milestone planning",
-      "Cross-functional team coordination",
-      "Risk identification & mitigation",
-      "Transparent client reporting",
+      "VPS / cloud deployment",
+      "CI/CD setup",
+      "Server optimization & monitoring",
+      "Domain & SSL configuration",
     ],
-    tools: ["Linear", "Notion", "Slack", "Loom"],
-    deliverables: "Project plan · Weekly status · Final retrospective",
-    turnaround: "Scales with your project",
+    tools: ["AWS", "VPS", "Docker", "Nginx", "PM2"],
+    deliverables: "Live deployment · CI/CD pipeline · Monitoring setup",
+    turnaround: "1 – 2 weeks",
   },
 };
 
 export default function ServicesModal({ service, onClose, onPrev, onNext }) {
   const detail = SERVICE_DETAILS[service.title] || {};
+    const Icon = detail.icon || service.icon;
 
   // Keyboard: Escape to close, arrows to navigate
   useEffect(() => {
@@ -109,7 +119,7 @@ export default function ServicesModal({ service, onClose, onPrev, onNext }) {
         <div className="pm-inner">
           <div className="pm-slider sm-icon-panel">
             <div className="sm-icon-display">
-              <span className="sm-big-icon">{detail.icon || service.icon}</span>
+              <span className="sm-big-icon">  {Icon && <Icon size={60} />}</span>
             </div>
             <div className="sm-tools">
               <div className="sm-tools-label">Tools & Stack</div>

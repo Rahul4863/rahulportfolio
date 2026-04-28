@@ -1,20 +1,16 @@
 import { useState } from "react";
 import { SERVICES } from "../data/constants";
 import ServicesModal from "./Servicesmodal";
-
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
-
   const openService = (service) => setSelectedService(service);
   const closeModal = () => setSelectedService(null);
-
   const navigate = (dir) => {
     if (!selectedService) return;
     const idx = SERVICES.findIndex((s) => s.title === selectedService.title);
     const next = (idx + dir + SERVICES.length) % SERVICES.length;
     setSelectedService(SERVICES[next]);
   };
-
   return (
     <>
       <section id="services">
@@ -26,7 +22,6 @@ export default function Services() {
             pixel-perfect, production-ready delivery.
           </p>
         </div>
-
         <div className="services-grid">
           {SERVICES.map((s, i) => {
             const Icon = s.icon;

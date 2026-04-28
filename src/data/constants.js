@@ -5,13 +5,14 @@ import { SiReact, SiNodedotjs } from "react-icons/si";
 import { MdPhoneIphone } from "react-icons/md";
 import { BiLinkAlt } from "react-icons/bi";
 import { GiRocket } from "react-icons/gi";
+import { FaHome, FaUser, FaFileAlt, FaBriefcase, FaCogs, FaEnvelope } from "react-icons/fa";
 export const NAV_ITEMS = [
-  { id: "hero", icon: "🏠", label: "Home" },
-  { id: "about", icon: "👤", label: "About" },
-  { id: "resume", icon: "📄", label: "Resume" },
-  { id: "portfolio", icon: "🖼", label: "Portfolio" },
-  { id: "services", icon: "⚙️", label: "Services" },
-  { id: "contact", icon: "✉️", label: "Contact" },
+  { id: "hero", icon: FaHome, label: "Home" },
+  { id: "about", icon: FaUser, label: "About" },
+  { id: "resume", icon: FaFileAlt, label: "Resume" },
+  { id: "portfolio", icon: FaBriefcase, label: "Portfolio" },
+  { id: "services", icon: FaCogs, label: "Services" },
+  { id: "contact", icon: FaEnvelope, label: "Contact" },
 ];
 export const SKILLS = [
   { name: "HTML5", val: 95 },
