@@ -1599,7 +1599,7 @@ footer a {
   padding: 40px 36px 36px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 14px;
   overflow-y: auto;
 }
 

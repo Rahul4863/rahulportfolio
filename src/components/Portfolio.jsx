@@ -1,13 +1,10 @@
 import { useState } from "react";
-import { PORTFOLIO_ITEMS } from "../data/constants";
+import { PORTFOLIO_ITEMS,CATEGORY_TYPES } from "../data/constants";
 import PortfolioModal from "./PortfolioModal";
-
-const FILTERS = ["all", "app", "product", "branding", "books"];
-
+const FILTERS = Object.values(CATEGORY_TYPES);
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedItem, setSelectedItem] = useState(null);
-
   const filtered =
     activeFilter === "all"
       ? PORTFOLIO_ITEMS
@@ -22,7 +19,6 @@ export default function Portfolio() {
     const next = (idx + dir + PORTFOLIO_ITEMS.length) % PORTFOLIO_ITEMS.length;
     setSelectedItem(PORTFOLIO_ITEMS[next]);
   };
-
   return (
     <>
       <section id="portfolio">
@@ -33,8 +29,6 @@ export default function Portfolio() {
             A curated selection of projects spanning digital products, brand identities, and editorial design.
           </p>
         </div>
-
-        {/* Filters */}
         <div className="portfolio-filters">
           {FILTERS.map((f) => (
             <button

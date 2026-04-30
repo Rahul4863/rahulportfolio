@@ -35,7 +35,6 @@ export default function Testimonials() {
       <div className="testi-carousel">
         {/* Card */}
         <div className="testi-card" key={current}>
-          <div className="testimonial-quote">"</div>
           <p className="testimonial-text">{t.text}</p>
           <div className="testimonial-author">
             <div className="testimonial-avatar">{t.initials}</div>
@@ -45,12 +44,8 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-
-        {/* Prev / Next arrows */}
         <button className="testi-arrow testi-prev" onClick={prev}>‹</button>
         <button className="testi-arrow testi-next" onClick={next}>›</button>
-
-        {/* Dot indicators */}
         <div className="testi-dots">
           {TESTIMONIALS.map((_, i) => (
             <button

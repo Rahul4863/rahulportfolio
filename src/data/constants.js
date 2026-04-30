@@ -15,21 +15,21 @@ export const NAV_ITEMS = [
   { id: "contact", icon: FaEnvelope, label: "Contact" },
 ];
 export const SKILLS = [
-  { name: "HTML5", val: 95 },
-  { name: "CSS3", val: 90 },
+  { name: "HTML5", val: 90 },
+  { name: "CSS3", val: 80 },
   { name: "JavaScript (ES6+)", val: 85 },
-  { name: "React.js", val: 85 },
-  { name: "Next.js", val: 80 },
-  { name: "Tailwind CSS / Bootstrap", val: 85 },
-  { name: "Node.js", val: 80 },
-  { name: "Express.js", val: 80 },
+  { name: "React.js", val: 80 },
+  { name: "Next.js", val: 60 },
+  { name: "Tailwind CSS / Bootstrap", val: 65 },
+  { name: "Node.js", val: 75 },
+  { name: "Express.js", val: 75 },
   { name: "PHP", val: 85 },
-  { name: "Laravel", val: 85 },
-  { name: "MongoDB", val: 80 },
-  { name: "MySQL", val: 85 },
+  { name: "Laravel", val: 50 },
+  { name: "MongoDB", val: 60 },
+  { name: "MySQL", val: 75 },
   { name: "React Native", val: 55 },
-  { name: "Git & GitHub", val: 85 },
-  { name: "Linux Basics", val: 70 },
+  { name: "Git & GitHub", val: 70 },
+  { name: "Linux Basics", val: 45 },
 ];
 export const STATS = [
   { icon: "😊", num: 232, label: "Happy Clients" },
@@ -37,19 +37,116 @@ export const STATS = [
   { icon: "🎧", num: 1453, label: "Hours Of Support" },
   { icon: "👥", num: 32, label: "Hard Workers" },
 ];
-
+export const CATEGORY_TYPES = {
+  ALL: "all",
+  APP: "app",
+  PRODUCT: "product",
+  BRANDING: "branding",
+  BOOKS: "books",
+};
 export const PORTFOLIO_ITEMS = [
-  { id: 1, cat: "app", title: "App 1", desc: "Mobile app design & development", emoji: "📱" },
-  { id: 2, cat: "product", title: "Product 1", desc: "Product design & branding", emoji: "🛍" },
-  { id: 3, cat: "branding", title: "Branding 1", desc: "Corporate identity & logo", emoji: "✨" },
-  { id: 4, cat: "books", title: "Books 1", desc: "Editorial & print design", emoji: "📚" },
-  { id: 5, cat: "app", title: "App 2", desc: "UI/UX for fintech app", emoji: "💳" },
-  { id: 6, cat: "product", title: "Product 2", desc: "E-commerce product page", emoji: "🎁" },
-  { id: 7, cat: "branding", title: "Branding 2", desc: "Brand refresh & guidelines", emoji: "🎨" },
-  { id: 8, cat: "books", title: "Books 2", desc: "Coffee table book layout", emoji: "📖" },
-  { id: 9, cat: "app", title: "App 3", desc: "Dashboard interface design", emoji: "📊" },
-];
-
+  { id: 1, cat: CATEGORY_TYPES.APP, title: "App 1", desc: "Mobile app design & development", emoji: "📱" },
+  { id: 2, cat: CATEGORY_TYPES.PRODUCT, title: "Product 1", desc: "Product design & branding", emoji: "🛍" },
+  { id: 3, cat: CATEGORY_TYPES.BRANDING, title: "Branding 1", desc: "Corporate identity & logo", emoji: "✨" },
+  { id: 4, cat: CATEGORY_TYPES.BOOKS, title: "Books 1", desc: "Editorial & print design", emoji: "📚" },
+  { id: 5, cat: CATEGORY_TYPES.APP, title: "App 2", desc: "UI/UX for fintech app", emoji: "💳" },
+  { id: 6, cat: CATEGORY_TYPES.PRODUCT, title: "Product 2", desc: "E-commerce product page", emoji: "🎁" },
+  { id: 7, cat: CATEGORY_TYPES.BRANDING, title: "Branding 2", desc: "Brand refresh & guidelines", emoji: "🎨" },
+  { id: 8, cat: CATEGORY_TYPES.BOOKS, title: "Books 2", desc: "Coffee table book layout", emoji: "📖" },
+  { id: 9, cat: CATEGORY_TYPES.APP, title: "App 3", desc: "Dashboard interface design", emoji: "📊" },
+]; 
+export const PORTFOLIO_DETAILS = {
+  1: {
+    title: "App 1",
+    cat: "app",
+    client: "TechCorp Inc.",
+    date: "15 March, 2024",
+    url: "www.example.com",
+    description:
+      "A full-featured mobile application designed to streamline daily workflows. The project involved end-to-end UI/UX research, prototyping, and pixel-perfect implementation across iOS and Android. Special attention was paid to micro-interactions and accessibility standards.",
+    images: ["📱", "🎨", "⚙️", "📊"],
+  },
+  2: {
+    title: "Product 1",
+    cat: "product",
+    client: "Luxe Brands",
+    date: "01 July, 2023",
+    url: "www.luxebrands.com",
+    description:
+      "A premium product identity crafted for a luxury goods brand. The project encompassed packaging design, photography art direction, and e-commerce visual storytelling — resulting in a 28% uplift in online conversions.",
+    images: ["🛍", "✨", "🎁", "📦"],
+  },
+  3: {
+    title: "Branding 1",
+    cat: "branding",
+    client: "Nova Studio",
+    date: "22 Jan, 2024",
+    url: "www.novastudio.io",
+    description:
+      "Complete corporate identity from the ground up — logo system, color palette, typography hierarchy, brand voice guidelines, and a comprehensive style guide delivered for cross-team consistency.",
+    images: ["✨", "🎨", "📐", "🖌"],
+  },
+  4: {
+    title: "Books 1",
+    cat: "books",
+    client: "Meridian Press",
+    date: "10 Sep, 2023",
+    url: "www.meridianpress.com",
+    description:
+      "Editorial design for a series of three books — typesetting, grid systems, chapter openers, and cover design. The final layouts balanced readability with strong visual character unique to each title.",
+    images: ["📚", "📖", "🖊", "📝"],
+  },
+  5: {
+    title: "App 2",
+    cat: "app",
+    client: "FinPay",
+    date: "03 Feb, 2024",
+    url: "www.finpay.app",
+    description:
+      "UI/UX redesign for a fintech payment application handling millions of daily transactions. Focus areas included trust-building design patterns, simplified onboarding flows, and a robust design system scalable across 12 product teams.",
+    images: ["💳", "📈", "🔐", "💰"],
+  },
+  6: {
+    title: "Product 2",
+    cat: "product",
+    client: "GiftBox Co.",
+    date: "20 Nov, 2023",
+    url: "www.giftbox.co",
+    description:
+      "E-commerce product page redesign increasing average session duration by 45%. Custom illustrations, 3D render integration, and mobile-first interaction design were key deliverables.",
+    images: ["🎁", "🛒", "📦", "🎀"],
+  },
+  7: {
+    title: "Branding 2",
+    cat: "branding",
+    client: "Apexion",
+    date: "14 Apr, 2024",
+    url: "www.apexion.com",
+    description:
+      "Brand refresh for a growing SaaS company entering enterprise markets. Updated visual language to convey authority and innovation while retaining brand equity built over 6 years.",
+    images: ["🎨", "🏢", "💼", "🔵"],
+  },
+  8: {
+    title: "Books 2",
+    cat: "books",
+    client: "Atelier Publishing",
+    date: "30 Jun, 2023",
+    url: "www.atelierpub.com",
+    description:
+      "A coffee-table photobook celebrating contemporary architecture. The design language mirrors the subject — clean geometry, generous white space, and a monochromatic palette punctuated by bold image crops.",
+    images: ["📖", "🏛", "📷", "🖼"],
+  },
+  9: {
+    title: "App 3",
+    cat: "app",
+    client: "DataViz Labs",
+    date: "08 Aug, 2024",
+    url: "www.datavizlabs.com",
+    description:
+      "Dashboard interface for a B2B analytics platform. Complex data hierarchies were translated into intuitive, at-a-glance visualisations. Delivered as a fully documented Figma component library + React implementation.",
+    images: ["📊", "📉", "🔭", "💡"],
+  },
+};
 export const SERVICES = [
   {
     icon: FaGlobe,
