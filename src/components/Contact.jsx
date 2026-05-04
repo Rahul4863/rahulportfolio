@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 
 export default function Contact() {
@@ -8,13 +9,67 @@ export default function Contact() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false); // ✅ added
+  const [errors, setErrors] = useState({}); // ✅ added
+
   const handleChange = (e) => {
     setFormData((f) => ({ ...f, [e.target.name]: e.target.value }));
+
+    // remove error while typing
+    setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
   };
 
-  const handleSubmit = () => {
-    alert("Message sent! Thank you.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+  const validate = () => {
+    let err = {};
+
+    if (!formData.name) err.name = "Name is required";
+    if (!formData.email) err.email = "Email is required";
+    if (!formData.subject) err.subject = "Subject is required";
+    if (!formData.message) err.message = "Message is required";
+
+    setErrors(err);
+    return Object.keys(err).length === 0;
+  };
+
+  const handleSubmit = async () => {
+    if (!validate()) return;
+
+    try {
+      setLoading(true);
+
+      const res = await fetch(
+        "https://deltawebservice.com/deltaview-lms/controller/email.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!res.ok) throw new Error("Network error");
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("✅ Message sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert("❌ " + (data.message || "Something went wrong"));
+      }
+    } catch (error) {
+      console.error(error);
+      alert("🚨 Server error, please try again");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -37,6 +92,7 @@ export default function Contact() {
               <p>Subhash Nagar Gurgaon,Haryana 122001</p>
             </div>
           </div>
+
           <div className="contact-info-item">
             <div className="contact-info-icon">📞</div>
             <div>
@@ -44,6 +100,7 @@ export default function Contact() {
               <p>+91 7982 9721 51</p>
             </div>
           </div>
+
           <div className="contact-info-item">
             <div className="contact-info-icon">✉️</div>
             <div>
@@ -65,7 +122,9 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
               />
+              {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
             </div>
+
             <div className="form-group">
               <label>Your Email</label>
               <input
@@ -75,6 +134,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
               />
+              {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
             </div>
           </div>
 
@@ -87,6 +147,7 @@ export default function Contact() {
               value={formData.subject}
               onChange={handleChange}
             />
+            {errors.subject && <p style={{ color: "red" }}>{errors.subject}</p>}
           </div>
 
           <div className="form-group">
@@ -97,10 +158,11 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
             />
+            {errors.message && <p style={{ color: "red" }}>{errors.message}</p>}
           </div>
 
-          <button className="form-submit" onClick={handleSubmit}>
-            Send Message →
+          <button className="form-submit" onClick={handleSubmit} disabled={loading}>
+            {loading ? "Sending..." : "Send Message →"}
           </button>
         </div>
       </div>
